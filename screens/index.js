@@ -2,6 +2,7 @@
  * Buckup Mobile App
  *
  * @mschwab
+ * PortedOver by dspamer
  */
 
 import React, { Component } from "react";
@@ -27,14 +28,15 @@ import { StackNavigator } from "react-navigation";
 // });
 
 import Home from "./Home";
-// import Scan from "./pages/scan";
+import Scan from "./Scan";
 // import Inquiry from "./pages/inquiry";
 // import Validate from "./pages/validate";
 import Transactions from "./Transactions";
 
 const Navigation = StackNavigator({
   Home: { screen: Home },
-  Transactions: { screen: Transactions }
+  Transactions: { screen: Transactions },
+  Scan: { screen: Scan }
 });
 
 // import 

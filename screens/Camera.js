@@ -1,3 +1,6 @@
+// **** THIS IS NOT AN ACTIVE COMPONENT IN THE APP
+// **** THIS IS TO BE USED IF THE CAMERA COMPONENT CAN NOT BE REVIVED
+
 import React from "react";
 import { StyleSheet, Text, View, TouchableOpacity, Slider } from "react-native";
 import { RNCamera } from "react-native-camera";

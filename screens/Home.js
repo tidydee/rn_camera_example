@@ -2,6 +2,7 @@
  * Buckup Mobile App
  *
  * @mschwab
+ * PortedOver by dspamer
  */
 
 import React, { Component } from "react";
@@ -24,7 +25,7 @@ export default class Home extends Component {
   constructor(props) {
     super(props);
 
-    this.navigate = this.navigate.bind(this);
+    // this.navigate = this.navigate.bind(this);
 
     this.state = { loading: 0 };
   }
@@ -40,9 +41,12 @@ export default class Home extends Component {
   componentDidUpdate(prevProps, prevState) {
     if (this.state.loading === 1) {
       this.setState({ loading: 2 });
+      let { navigate } = this.props.navigation;
       setTimeout(() => {
         // Disable loading of camera so loading icon can load first so it is less confusing for the user.
-        this.navigate("Scan");
+        // this.navigate("Scan");
+        // navigate("Scan", {name: "CAMERA", data: "future data to be send to Scan component"})
+        navigate("Scan", {name: "CAMERA", data: "future data to be send to Scan component"})
       }, 125);
     }
   }
@@ -71,8 +75,8 @@ export default class Home extends Component {
               
               <Button
                 onPress={() => {
-                //   this.setState({ loading: 1 });
-                alert("this.navigate SCAN TICKET");
+                  this.setState({ loading: 1 });
+                // alert("this.navigate SCAN TICKET");
                 }}
                 title="Scan Ticket"
                 color="#41b6e6"
@@ -81,10 +85,9 @@ export default class Home extends Component {
               />
               
               <Button
-                onPress={() => navigate("Transactions", {name: "TEST", email: "test@gmail.com"})
-                //   this.navigate("Transactions");
                 // alert("this.navigate TRANSACTION");
-                }
+                // TODO: When API is live, look into the Call. Below is working only to reveal Error HTTP 596.
+                onPress={() => navigate("Transactions", {name: "TEST", email: "test@gmail.com"})}
                 title="Recent Transactions"
                 color="#41b6e6"
                 accessibilityLabel="List Previous Transactions"
@@ -97,11 +100,11 @@ export default class Home extends Component {
     }
   }
 
-  navigate(id) {
-    this.props.navigator.push({
-      id: id
-    });
-  }
+  // navigate(id) {
+  //   this.props.navigator.push({
+  //     id: id
+  //   });
+  // }
 }
 
 let { height, width } = Dimensions.get("window");
