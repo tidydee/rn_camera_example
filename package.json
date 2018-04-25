@@ -4,7 +4,13 @@
   "dependencies": {
     "react": "16.0.0",
     "react-native": "0.51.0",
-    "react-native-camera": "git+https://git@github.com/react-native-community/react-native-camera"
+    "react-native-camera": "git+https://git@github.com/react-native-community/react-native-camera",
+    "react-native-deprecated-custom-components": "^0.1.2",
+    "react-native-device-info": "^0.10.2",
+    "react-native-volume": "0.0.1",
+    "react-navigation": "^1.5.11",
+    "util": "*",
+    "rn-splash-screen": "^4.0.0"
   },
   "devDependencies": {
     "babel-jest": "22.0.4",
