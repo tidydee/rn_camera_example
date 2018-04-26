@@ -22,11 +22,6 @@ import Navigator from "react-native-deprecated-custom-components";
 
 import { StackNavigator } from "react-navigation";
 
-// const App = StackNavigator({
-//   Home: { screen: Home },
-//   Transactions: { screen: Transactions }
-// });
-
 import Home from "./Home";
 import Scan from "./Scan";
 // import Inquiry from "./pages/inquiry";

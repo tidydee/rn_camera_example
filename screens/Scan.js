@@ -48,6 +48,8 @@ export default class Scan extends Component {
 
   render() {
     let { navigate } = this.props.navigation;
+    console.log("this.props.navigation.state = " + util.inspect(this.props.navigation.state, false, null));
+    
     if (this.state.camera === 1) {
       return (
         <View style={[styles.container, styles.center]}>
@@ -99,16 +101,23 @@ export default class Scan extends Component {
   }
 
   navigate(id, event) {
+    let { navigate } = this.props.navigation;
     this.setState({ camera: 1 });
 
     if (!event) {
       event = null;
     }
+    console.log("this.props.navigation.state = " + util.inspect(this.props.navigation.state, false, null));
+    console.log("id: = " + id);
+    console.log("event: = " + event);
+    console.log("event: = " + JSON.stringify(event));
 
-    this.props.navigator.push({
-      id: id,
-      event: event
-    });
+    // navigate("")
+    
+    // this.props.navigator.push({
+    //   id: id,
+    //   event: event
+    // });
   }
 }
 
