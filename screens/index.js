@@ -24,14 +24,15 @@ import { StackNavigator } from "react-navigation";
 
 import Home from "./Home";
 import Scan from "./Scan";
-// import Inquiry from "./pages/inquiry";
+import Inquiry from "./Inquiry";
 // import Validate from "./pages/validate";
 import Transactions from "./Transactions";
 
 const Navigation = StackNavigator({
   Home: { screen: Home },
   Transactions: { screen: Transactions },
-  Scan: { screen: Scan }
+  Scan: { screen: Scan },
+  Inquiry: {screen: Inquiry }
 });
 
 // import 

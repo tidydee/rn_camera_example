@@ -9,7 +9,7 @@ import React, { Component } from "react";
 import { StyleSheet, Text, View, Button, ListView } from "react-native";
 const util = require("util");
 
-import DeviceInfo from "react-native-device-info";
+// import DeviceInfo from "react-native-device-info";
 
 export default class Home extends Component {
   static navigationOptions = {

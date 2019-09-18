@@ -112,7 +112,8 @@ export default class Scan extends Component {
     console.log("event: = " + event);
     console.log("event: = " + JSON.stringify(event));
 
-    // navigate("")
+    // navigate("Inquiry");
+    navigate("Inquiry", {event});
     
     // this.props.navigator.push({
     //   id: id,
